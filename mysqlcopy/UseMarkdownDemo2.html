@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+<textarea id="oriContent" style="height:400px;width:600px;" onkeyup="convert()"></textarea>
+
+<div id="result"></div>
+
+<script type="text/javascript">
+    function convert(){
+        var text = document.getElementById("oriContent").value;
+        var html = marked(text);
+        document.getElementById("result").innerHTML = html;
+    }
+</script>
+</body>
+</html>
